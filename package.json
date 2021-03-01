@@ -1,0 +1,42 @@
+{
+  "name": "electron-webpack-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "dev": "electron-webpack dev",
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.electron.interact.js",
+    "win": {
+      "target": "portable"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "electronWebpack": {
+    "title": "My Custom Title",
+    "main": {
+      "sourceDirectory": "src/main"
+    },
+    "renderer": {
+      "sourceDirectory": "src/renderer",
+      "template": "src/renderer/index.html"
+    }
+  },
+  "devDependencies": {
+    "electron": "^11.3.0",
+    "electron-webpack": "^2.8.2",
+    "webpack": "^4.46.0"
+  },
+  "dependencies": {
+    "cash-dom": "^8.1.0",
+    "sass": "^1.32.8",
+    "sass-loader": "^10.1.1",
+    "source-map-support": "^0.5.19"
+  }
+}
